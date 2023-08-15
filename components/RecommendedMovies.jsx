@@ -17,7 +17,7 @@ const RecommendedMovies = () => {
   }, [session]);
 
   useEffect(() => {
-    if (movies) {
+    if (movies.length > 0) {
       getRecommendedMovies(movies, setRecommendedMovies);
       console.log(movies);
     }

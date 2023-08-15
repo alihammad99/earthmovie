@@ -3,7 +3,7 @@ import SearchCard from "./SearchCard";
 import searchMovie from "@/utils/search-movie";
 
 const Search = () => {
-  const [width, setWidth] = useState();
+  const [width, setWidth] = useState(0);
   const [text, setText] = useState("");
   const [result, setResult] = useState([]);
 
@@ -29,7 +29,7 @@ const Search = () => {
       <input
         onChange={(e) => setText(e.target.value)}
         style={
-          width < 560 ? { ...styles.input, width: width  } : styles.input
+          width < 560 ? { ...styles.input, width: width - 36 } : styles.input
         }
         type="search"
         placeholder="Search"
