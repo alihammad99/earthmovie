@@ -20,7 +20,7 @@ function PopularMovies() {
   return (
     <div
       style={
-        width < 560 ? { ...styles.container, marginTop: 36 } : styles.container
+        width < 560 ? { ...styles.container, marginTop: 140 } : styles.container
       }
     >
       <MovieSlider title="Popular Movies" movies={movies} />

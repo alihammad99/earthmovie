@@ -41,8 +41,8 @@ const movie = () => {
           <p>Loading...</p>
         ) : (
           <>
-            <div style={width < 650 ? { padding: 18, marginTop: 12 } : {}}>
-              {width < 650 && <Image src={path} height={540} width={width} />}
+            <div style={width < 560 ? { padding: 18, marginTop: 12 } : {}}>
+              {width < 560 && <Image src={path} height={540} width={width} />}
               <div className="row" style={width < 650 ? { marginTop: 18 } : {}}>
                 <div className="row">
                   <Image src="/star.svg" width={24} height={24} />
@@ -56,7 +56,7 @@ const movie = () => {
                   <p>{movie.release_date}</p>
                 </div>
               </div>
-              <div style={width > 650 ? { width: 580 } : { width: width - 24 }}>
+              <div style={width > 560 ? { width: 580 } : { width: width - 24 }}>
                 <h1 style={styles.title}>{movie.original_title}</h1>
                 <p
                   style={
@@ -79,7 +79,7 @@ const movie = () => {
                 )}
               </div>
             </div>
-            {width >= 650 && <Image src={path} height={540} width={382} />}
+            {width >= 560 && <Image src={path} height={540} width={382} />}
           </>
         )}
       </div>
