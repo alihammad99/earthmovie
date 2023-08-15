@@ -8,8 +8,5 @@ export default NextAuth({
       clientSecret: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SECRET_KEY,
     }),
   ],
-  // Additional configuration here
-  // session: {
-  //   jwt: true,
-  // },
+  secret: "NiceShot!",
 });
