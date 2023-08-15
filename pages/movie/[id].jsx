@@ -36,13 +36,22 @@ const movie = () => {
     <>
       <TopNav />
 
-      <div className="row" style={styles.container}>
+      <div
+        className="row"
+        style={
+          width < 560
+            ? { ...styles.container, maxWidth: width - 24 }
+            : styles.container
+        }
+      >
         {!movie.id ? (
           <p>Loading...</p>
         ) : (
           <>
             <div style={width < 560 ? { padding: 18, marginTop: 12 } : {}}>
-              {width < 560 && <Image src={path} height={540} width={width} />}
+              {width < 560 && (
+                <Image src={path} height={440} width={width / 3 + width / 2} />
+              )}
               <div className="row" style={width < 650 ? { marginTop: 18 } : {}}>
                 <div className="row">
                   <Image src="/star.svg" width={24} height={24} />
@@ -56,11 +65,11 @@ const movie = () => {
                   <p>{movie.release_date}</p>
                 </div>
               </div>
-              <div style={width > 560 ? { width: 580 } : { width: width - 24 }}>
+              <div style={width > 560 ? { width: 580 } : { width: "auto" }}>
                 <h1 style={styles.title}>{movie.original_title}</h1>
                 <p
                   style={
-                    width > 650
+                    width > 560
                       ? { ...styles.description, width: 440 }
                       : styles.description
                   }

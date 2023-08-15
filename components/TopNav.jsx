@@ -74,8 +74,7 @@ const styles = {
     margin: "auto",
     flexWrap: "wrap",
     gap: 6,
-    alignSelf: "center",
-    alignItems: "center",
+
   },
   right: {
     display: "flex",
